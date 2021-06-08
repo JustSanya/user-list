@@ -1,0 +1,37 @@
+.radioWrap {
+  background: #333;
+  border-right: 1px solid #000;
+  &:last-child {
+    border-right: 0;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: block;
+    padding: 5px 15px;
+  }
+
+  input:checked ~ label {
+    background: #555;
+  }
+}
+
+.radioGroup {
+  display: inline-flex;
+  border: 1px solid #000;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.controlItem {
+  margin-bottom: 15px;
+}
+
+.controlTitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
