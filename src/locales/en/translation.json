@@ -1,0 +1,16 @@
+{
+  "sortKeyTitle": "Sort by",
+  "sortOrderTitle": "Sort order",
+  "viewTypeTitle": "View",
+  "searchTitle": "Search by name",
+  "searchPlaceholder": "Enter name or last name",
+  "nameSort": "Name",
+  "ageSort": "Age",
+  "ascSort": "Ascending",
+  "descSort": "Descending",
+  "tableViewType": "Table",
+  "previewViewType": "Preview",
+  "agePostfix1": "year",
+  "agePostfix2": "years",
+  "agePostfix3": "years"
+}

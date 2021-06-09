@@ -12,6 +12,7 @@
   label {
     display: block;
     padding: 5px 15px;
+    cursor: pointer;
   }
 
   input:checked ~ label {
@@ -34,4 +35,48 @@
   font-size: 18px;
   margin-bottom: 6px;
   font-weight: 500;
+}
+
+.controlsWrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  & > div {
+    flex-basis: 50%;
+  }
+}
+
+.textInput {
+  display: block;
+  padding: 5px 15px;
+  border: 1px solid #fff;
+  background-color: #222;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  border-radius: 6px;
+
+  &::placeholder {
+    color: #cecece;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .controlsWrapper {
+    display: block;
+  }
+  .controlTitle {
+    font-size: 16px;
+  }
+  .controlItem {
+    margin-bottom: 10px;
+  }
+  .radioWrap {
+    label {
+      font-size: 14px;
+    }
+  }
+  .textInput {
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+
 import { changeSortKey, selectSortKey } from "../../redux/users";
 import {
   radioWrap,
@@ -11,13 +13,14 @@ import {
 export default function SortType() {
   const dispatch = useDispatch();
   const sortKey = useSelector(selectSortKey);
+  const { t } = useTranslation();
 
   const onChangeHandle = ({ target }) => {
     dispatch(changeSortKey(target.value));
   };
   return (
     <div className={controlItem}>
-      <p className={controlTitle}>Сортировка</p>
+      <p className={controlTitle}>{t("sortKeyTitle")}</p>
       <div className={radioGroup}>
         <div className={radioWrap}>
           <input
@@ -39,7 +42,7 @@ export default function SortType() {
             name="sortKey"
             checked={sortKey === "name"}
           />
-          <label htmlFor="sort-name">Имя</label>
+          <label htmlFor="sort-name">{t("nameSort")}</label>
         </div>
         <div className={radioWrap}>
           <input
@@ -50,7 +53,7 @@ export default function SortType() {
             name="sortKey"
             checked={sortKey === "age"}
           />
-          <label htmlFor="sort-age">Возраст</label>
+          <label htmlFor="sort-age">{t("ageSort")}</label>
         </div>
       </div>
     </div>

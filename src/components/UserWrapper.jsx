@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   fetchUsers,
   selectViewType,
@@ -7,7 +8,7 @@ import {
 } from "../redux/users";
 
 import UserRow from "./UserRow";
-import styles from "./UserWrapper.module.scss";
+import styles from "../styles/UserWrapper.module.scss";
 
 export default function UserWrapper() {
   const UserPreview = React.lazy(() => import("./UserPreview"));
@@ -25,7 +26,7 @@ export default function UserWrapper() {
       {viewType === "table" ? (
         <div className={styles.userTable}>
           {users.map((el) => (
-            <UserRow user={el} key={el.id} />
+            <UserRow key={el.id} user={el} />
           ))}
         </div>
       ) : (

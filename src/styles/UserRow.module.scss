@@ -3,6 +3,7 @@
   align-items: center;
   padding: 10px 5px;
   border-bottom: 1px solid #000;
+  overflow: hidden;
 }
 
 .img {
@@ -47,4 +48,29 @@
 
 .favoriteBtnActive {
   opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .item {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+
+  .imgWrapper {
+    flex-basis: 60px;
+  }
+
+  .phone {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 60px;
+    flex-basis: 70%;
+  }
+
+  .username {
+    flex-grow: 1;
+  }
+  .age {
+    flex-basis: auto;
+  }
 }

@@ -1,20 +1,24 @@
 import React from "react";
-import styles from "./UserRow.module.scss";
-import classNames from "classnames";
+import { useTranslation } from "react-i18next";
+
+import styles from "../styles/UserRow.module.scss";
+import Favorite from "./Favorite";
 
 export default function UserRow({ user }) {
+  const { t } = useTranslation();
+
   let agePostfix = "";
   switch (user.age % 10) {
     case 1:
-      agePostfix = "год";
+      agePostfix = t("agePostfix1");
       break;
     case 2:
     case 3:
     case 4:
-      agePostfix = "года";
+      agePostfix = t("agePostfix2");
       break;
     default:
-      agePostfix = "лет";
+      agePostfix = t("agePostfix3");
   }
   return (
     <div className={styles.item}>
@@ -33,13 +37,7 @@ export default function UserRow({ user }) {
       </div>
       <div className={styles.phone}>{user.phone}</div>
       <div className={styles.favorite}>
-        <button
-          className={classNames(styles.favoriteBtn, {
-            [styles.favoriteBtnActive]: user.favourite,
-          })}
-        >
-          &#9733;
-        </button>
+        <Favorite userId={user.id} favorite={user.favourite} />
       </div>
     </div>
   );

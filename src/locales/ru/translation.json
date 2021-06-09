@@ -1,0 +1,16 @@
+{
+  "sortKeyTitle": "Сортировка",
+  "sortOrderTitle": "Порядок сортировки",
+  "viewTypeTitle": "Представление",
+  "searchTitle": "Поиск по имени",
+  "searchPlaceholder": "Введите имя или фамилию",
+  "nameSort": "Имя",
+  "ageSort": "Возраст",
+  "ascSort": "По возрастанию",
+  "descSort": "По убыванию",
+  "tableViewType": "Таблица",
+  "previewViewType": "Превью",
+  "agePostfix1": "год",
+  "agePostfix2": "года",
+  "agePostfix3": "лет"
+}
